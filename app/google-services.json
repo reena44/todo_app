@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "830567518345",
+    "firebase_url": "https://learningproject-289708.firebaseio.com",
+    "project_id": "learningproject-289708",
+    "storage_bucket": "learningproject-289708.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830567518345:android:244066219bc59e0111f658",
+        "android_client_info": {
+          "package_name": "com.example.reena"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830567518345-0v0lqsa7167vi6kf8lo30h2s0k7qsbip.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.reena",
+            "certificate_hash": "8c96b687a6a4835b27281de372c6da5c201d62c0"
+          }
+        },
+        {
+          "client_id": "830567518345-gdoj91ldrkttep2iisq9q4qnf84d5018.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzDl8QBlUdD7q6x2ndVkhD1NqOT6ycu-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "830567518345-gdoj91ldrkttep2iisq9q4qnf84d5018.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
