@@ -17,4 +17,11 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="splash">Splash</string>
+    <string name="play_store_commen_url">https://play.google.com/store/apps/details?id=com.example.reena</string>
+
+    <string name="navigation_drawer_open">open navigantion drawer</string>
+    <string name="navigation_drawer_close">navigation drawer close</string>
+    <string name="share_my_app">Share App**</string>
+    <string name="share_app_subject">Todo App</string>
+    <string name="yes">Yes</string>
 </resources>

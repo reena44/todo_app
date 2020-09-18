@@ -30,21 +30,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val sharePref = activity!!.getSharedPreferences(
-            sharedPrefFile,
-            AppCompatActivity.MODE_PRIVATE
-        )
-        name = sharePref?.getString("name_key", " ")
-        emaiId = sharePref.getString("email_id", " ")
 
-        if (name.isNullOrEmpty()) {
-            tv_profile.text = " "
-
-        } else {
-            tv_profile.text =  name+"\n"+emaiId
-
-
-        }
 
     }
 

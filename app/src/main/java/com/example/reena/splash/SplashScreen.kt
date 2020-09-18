@@ -8,6 +8,7 @@ import com.example.reena.R
 import com.example.reena.homescreen.MainActivity
 import com.example.reena.login.LoginActivity
 import com.example.reena.utility.UserLoginDetail
+import com.example.reena.utility.UserLoginDetail.Companion.flag
 
 
 class SplashScreen : AppCompatActivity() {
@@ -15,10 +16,9 @@ class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
-        supportActionBar!!.hide()
 
         Handler().postDelayed({
-            if ( UserLoginDetail().flag) {
+            if ( flag) {
                 startActivity(Intent(applicationContext, MainActivity::class.java))
             }
             else {
