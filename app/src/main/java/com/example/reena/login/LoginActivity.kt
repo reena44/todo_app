@@ -4,12 +4,14 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
+import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.reena.R
 import com.example.reena.homescreen.MainActivity
+import com.example.reena.utility.UserLoginDetail
 import com.example.reena.utility.UserLoginDetail.Companion.flag
 import com.example.reena.utility.UserLoginDetail.Companion.sharedPrefFile
 import com.google.android.gms.auth.api.signin.*
@@ -19,6 +21,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 
 class LoginActivity : AppCompatActivity() {
+    lateinit var  sharePref: SharedPreferences
     var doubleBackToExitPressedOnce = false
 
     lateinit var  mGoogleSignInClient: GoogleSignInClient
@@ -28,6 +31,9 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+         sharePref = this.getSharedPreferences(sharedPrefFile, MODE_PRIVATE)
+
         signin_btn.setOnClickListener {
             progrees_bar.visibility = View.VISIBLE
             signView()
@@ -77,7 +83,6 @@ class LoginActivity : AppCompatActivity() {
 
              /*tv_output.text= account.displayName +"\n"+account.email
              btn_logout.visibility = View.VISIBLE*/
-             val sharePref = this.getSharedPreferences(sharedPrefFile, MODE_PRIVATE)
              val editor:SharedPreferences.Editor =  sharePref.edit()
              editor.putString("name_key", account.displayName)
              editor.putString("email_id", account.email)
@@ -130,5 +135,47 @@ class LoginActivity : AppCompatActivity() {
         this.doubleBackToExitPressedOnce = true
         Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
         Handler().postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
+    }
+
+    fun onLoginClick(view: View) {
+        if(validateFields()){
+            flag = true
+            val editor:SharedPreferences.Editor =  sharePref.edit()
+            editor.putString("name_key", edt_name.text.toString())
+            editor.putString("email_id", edt_email.text.toString())
+            editor.apply()
+            editor.commit()
+            this.finish()
+            Toast.makeText(this, "Login successfully", Toast.LENGTH_LONG).show()
+            startActivity(Intent(applicationContext, MainActivity::class.java))
+            finish()
+
+
+        }
+    }
+
+    private fun validateFields(): Boolean {
+
+        if (edt_email.text!!.isEmpty()) {
+            layout_email.error = getString(R.string.empty_email_field)
+            edt_email.requestFocus()
+            return false
+        } else if (!UserLoginDetail().isValidEmail(edt_email.text.toString())) {
+            edt_email.error = getString(R.string.error_valid_email)
+            edt_email.requestFocus()
+            return false
+        } else {
+            layout_email.isErrorEnabled = false
+            edt_email.clearFocus()
+        }
+        if (edt_name.text!!.isEmpty()) {
+            layout_name.error = getString(R.string.enter_name)
+            edt_name.requestFocus()
+
+            return false
+        }  else {
+            layout_name.isErrorEnabled = false
+        }
+        return true
     }
 }

@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group>
-        <item android:id="@+id/nav_item_one"
-            android:icon="@drawable/ic_baseline_settings_24"
-            android:title="Item 1" />
-        <item android:id="@+id/nav_item_two"
-            android:icon="@drawable/ic_baseline_settings_24"
-            android:title="Item 2" />
-        <item android:id="@+id/nav_item_three"
-            android:icon="@drawable/ic_baseline_settings_24"
-            android:title="Item 3" />
+       <!-- <item android:id="@+id/Home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home" />-->
+        <item android:id="@+id/about_us"
+            android:icon="@drawable/ic_about_us"
+            android:title="About Us" />
+        <item android:id="@+id/share_app"
+            android:icon="@drawable/ic_share"
+            android:title="Share app" />
+        <item android:id="@+id/nav_item_Logout"
+            android:icon="@drawable/icon_logout"
+            android:title="Logout" />
+
     </group>
 
-    <group android:id="@+id/group_menu">
-        <item android:id="@+id/nav_item_four"
-            android:title="Item 4" />
-        <item android:id="@+id/nav_item_five"
-            android:title="Item 5" />
-    </group>
-
-    <item android:title="Share App and Logout">
+    <!--<item android:title="Share App and Logout">
         <menu>
-            <item android:id="@+id/share_app"
-                android:icon="@drawable/ic_baseline_settings_24"
-                android:title="Share app" />
-                <item android:id="@+id/nav_item_Logout"
-                android:icon="@drawable/ic_baseline_settings_24"
-                android:title="Logout" />
+
         </menu>
-    </item>
+    </item>-->
 </menu>

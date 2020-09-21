@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TodoApp</string>
+    <string name="app_name">Poetry World</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="home_fragment">Home Fragment</string>
     <string name="sport_fragment">Sport Fragment</string>
@@ -16,7 +16,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="splash">Splash</string>
+    <string name="splash">Poetry World</string>
     <string name="play_store_commen_url">https://play.google.com/store/apps/details?id=com.example.reena</string>
 
     <string name="navigation_drawer_open">open navigantion drawer</string>
@@ -24,4 +24,40 @@
     <string name="share_my_app">Share App**</string>
     <string name="share_app_subject">Todo App</string>
     <string name="yes">Yes</string>
+
+    <string name="title1">Mera Bapu / ਮੇਰਾ ਬਾਪੂ</string>
+    <string name="link1"><![CDATA["https://www.youtube.com/watch?v=5dSW-oFCDPo&feature=youtu.be"]]></string>
+
+    <string name="title2">Udeek</string>
+    <string name="link2"><![CDATA[https://www.youtube.com/watch?v=99plSMQPhtw]]></string>
+
+    <string name="title3">Vapaari Hunda</string>
+    <string name="link3"><![CDATA[https://www.youtube.com/watch?v=-FtDxT8VUzo]]></string>
+
+    <string name="title4">Din Char</string>
+    <string name="link4">"https://www.youtube.com/watch?v=NqZlwnmOaS4"</string>
+
+
+    <string name="title5">Aitbaar</string>
+    <string name="link5">"https://www.youtube.com/watch?v=57ziGWY3a_k"</string>
+
+    <string name="title6">Rooh</string>
+    <string name="link6">"https://www.youtube.com/watch?v=UlBvEb2Wdyg"</string>
+
+    <string name="title7">Ki Pta c </string>
+    <string name="link7"><![CDATA["https://www.youtube.com/watch?v=SjN_A2sWBBc&t=60s"]]></string>
+
+    <string name="title8"> Pehchan / ਪਿਹਚਾਣ</string>
+    <string name="link8"><![CDATA["https://www.youtube.com/watch?v=PcOLiarA-98"]]></string>
+
+    <string name="enter_email">Enter your email address</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="empty_name_field">Please enter your name</string>
+    <string name="empty_email_field">Please enter your email id</string>
+    <string name="error_valid_email">Please enter valid email address</string>
+    <string name="login">Login</string>
+    <string name="login_with_google">Login with google</string>
+    <string name="about_us">All poems in this app written ,recorded and videoed by Akashdeep Banga.We are special thanksto him and humbly thanks to Priyanka Maam for her immense support.Thanks You!</string>
+
+
 </resources>
