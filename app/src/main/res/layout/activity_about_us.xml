@@ -17,9 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Poetry World"
-        android:padding="8dp"
         android:layout_gravity="center"
-        android:layout_marginTop="4dp"
         android:textColor="@color/colorGreenLight"
         android:textStyle="bold"
         android:textSize="16dp"/>
@@ -33,7 +31,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -66,6 +65,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Rate this app on Google Play Store"
+            android:padding="8dp"
+            android:textColor="@color/colorGreenLight"
+            android:textStyle="bold"
+            android:textSize="16dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardPreventCornerOverlap="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/cv_feedback"
+        android:onClick="giveFeedback"
+        app:cardCornerRadius="10dp">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Feedback to Developer"
             android:padding="8dp"
             android:textColor="@color/colorGreenLight"
             android:textStyle="bold"

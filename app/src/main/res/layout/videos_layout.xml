@@ -11,7 +11,7 @@
         android:id="@+id/rv_videos_link"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/videos_item"/>
 
 </LinearLayout>

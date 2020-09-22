@@ -57,7 +57,5 @@
     <string name="error_valid_email">Please enter valid email address</string>
     <string name="login">Login</string>
     <string name="login_with_google">Login with google</string>
-    <string name="about_us">All poems in this app written ,recorded and videoed by Akashdeep Banga.We are special thanksto him and humbly thanks to Priyanka Maam for her immense support.Thanks You!</string>
-
-
+    <string name="about_us">All poems in this app written ,recorded and videoed by Akashdeep Banga.We are special Thanks to him and humbly Thanks to Priyanka Rajput  for her immense support and guidance.Thanks You!</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.reena.homescreen
 
+import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.res.Configuration
@@ -9,6 +10,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.MenuItem
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -16,10 +18,12 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.reena.R
 import com.example.reena.VideoViewModel
 import com.example.reena.aboutus.AboutUs
 import com.example.reena.login.LoginActivity
+import com.example.reena.utility.GridSpacingItemDecoration
 import com.example.reena.utility.UserLoginDetail.Companion.flag
 import com.example.reena.utility.UserLoginDetail.Companion.sharedPrefFile
 import com.example.reena.videolink.VideoViewAdapter
@@ -37,6 +41,9 @@ import kotlinx.android.synthetic.main.view_pager.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener ,VideoViewAdapter.OnItemClick{
     var doubleBackToExitPressedOnce = false
+    val spanCount = 2 // 2 columns
+    val spacing = 5 // 0px
+    val includeEdge = false
 
     private var name: String?= " "
      private var emaiId: String?= " "
@@ -131,7 +138,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             override fun onTabReselected(tab: TabLayout.Tab) {}
         })
     }
+    @SuppressLint("WrongConstant")
     private fun setAdapter() {
+        rv_videos_link.layoutManager = GridLayoutManager(this, spanCount, LinearLayout.VERTICAL, false)
+        rv_videos_link.addItemDecoration(GridSpacingItemDecoration(spanCount, spacing, includeEdge))
         rv_videos_link.adapter = VideoViewAdapter(this, arrayList)
         /*val adapter = ViewPagerAdapter(this, supportFragmentManager, tabLayout!!.tabCount)
         viewPager!!.adapter = adapter
